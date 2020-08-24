@@ -15,6 +15,84 @@ body {
 	line-height: 1.5;
 }
 
+hr {
+	background: $secondary-color;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	width: 50%;
+	height: 2px;
+	border: none;
+}
+
+// Language buttons
+.container {
+	position: absolute;
+	max-width: 200px;
+	color: #555;
+	text-align: center;
+}
+
+.langWrap {
+	// background: #333;
+
+	a {
+		text-transform: uppercase;
+		color: #fff;
+		text-decoration: none;
+		padding: 0 10px;
+		font-weight: bold;
+		background: #555656;
+		font-size: 16px;
+
+		&.active {
+			background: $secondary-color;
+		}
+	}
+}
+
+// Arrow
+.arrow {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	span {
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-bottom: 1px solid $secondary-color;
+		border-right: 1px solid $secondary-color;
+		transform: rotate(45deg);
+		margin: -10px;
+		animation: animate 2s infinite;
+
+		&:nth-child(2) {
+			animation-delay: -0.2s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: -0.4s;
+		}
+	}
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg translate(-20px, -20px));
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg translate(20px, 20px));
+	}
+}
+
 // Headings
 h1,
 h2,
@@ -49,6 +127,7 @@ header {
 }
 
 main {
+	background: rgba($primary-color, $background-opacity);
 	padding: 4rem;
 	min-height: calc(100vh - 60px);
 
@@ -108,6 +187,44 @@ main {
 	}
 
 	.job {
+		background: lighten($primary-color, 5);
+		padding: 0.5rem;
+		border-bottom: $secondary-color 5px solid;
+	}
+}
+
+.skill-info {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-areas:
+		'bio bio'
+		'skill1 skill2';
+	grid-template-columns: repeat(2, 1fr);
+
+	.bio {
+		grid-area: bio;
+		font-size: 1.5rem;
+	}
+
+	.skill-1 {
+		grid-area: skill1;
+
+		h3 {
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	.skill-2 {
+		grid-area: skill2;
+
+		h3 {
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	.skill {
 		background: lighten($primary-color, 5);
 		padding: 0.5rem;
 		border-bottom: $secondary-color 5px solid;
@@ -188,6 +305,18 @@ main {
 	background: darken($primary-color, 10);
 	color: set-text-color($primary-color);
 	height: 60px;
+}
+
+// Show on scroll
+.reveal {
+	opacity: 0;
+	transform: translateY(-30px);
+
+	&-visible {
+		opacity: 1;
+		transform: translateY(0);
+		transition: 1s;
+	}
 }
 
 @import 'mobile';
