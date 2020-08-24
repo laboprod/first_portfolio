@@ -113,7 +113,63 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(68, 68, 68, 0.7); }
+
+hr {
+  background: #eece1a;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 50%;
+  height: 2px;
+  border: none; }
+
+.container {
+  position: absolute;
+  max-width: 200px;
+  color: #555;
+  text-align: center; }
+
+.langWrap a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  font-weight: bold;
+  background: #555656;
+  font-size: 16px; }
+  .langWrap a.active {
+    background: #eece1a; }
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #eece1a;
+    border-right: 1px solid #eece1a;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite; }
+    .arrow span:nth-child(2) {
+      animation-delay: -0.2s; }
+    .arrow span:nth-child(3) {
+      animation-delay: -0.4s; }
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg translate(-20px, -20px)); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg translate(20px, 20px)); } }
 
 h1,
 h2,
@@ -144,6 +200,7 @@ header {
   color: #eece1a; }
 
 main {
+  background: rgba(68, 68, 68, 0.7);
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
@@ -180,6 +237,29 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }
+
+.skill-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bio bio' 'skill1 skill2';
+  grid-template-columns: repeat(2, 1fr); }
+  .skill-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .skill-info .skill-1 {
+    grid-area: skill1; }
+    .skill-info .skill-1 h3 {
+      font-weight: bold;
+      text-align: center; }
+  .skill-info .skill-2 {
+    grid-area: skill2; }
+    .skill-info .skill-2 h3 {
+      font-weight: bold;
+      text-align: center; }
+  .skill-info .skill {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
@@ -238,6 +318,14 @@ main {
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(-30px); }
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s; }
 
 @media screen and (min-width: 1171px) {
   .projects {
