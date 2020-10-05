@@ -366,9 +366,5 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  body {
-    width: 100%; }
-  main#home h1 {
-    margin-top: 10vh; }
   .projects {
     grid-template-columns: 1fr; } }
