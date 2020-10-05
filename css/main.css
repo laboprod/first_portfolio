@@ -240,7 +240,8 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
   .skill-info .skill-1 {
-    grid-area: skill1; }
+    grid-area: skill1;
+    text-align: center; }
     .skill-info .skill-1 h3 {
       font-weight: bold;
       text-align: center; }
@@ -253,6 +254,11 @@ main {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+    .skill-info .skill ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: center; }
 
 .projects {
   display: grid;
