@@ -15,43 +15,6 @@ body {
 	line-height: 1.5;
 }
 
-// hr {
-// 	background: $secondary-color;
-// 	margin-top: 0;
-// 	margin-bottom: 0;
-// 	padding-left: 0;
-// 	padding-right: 0;
-// 	width: 50%;
-// 	height: 2px;
-// 	border: none;
-// }
-
-// Language buttons
-.container {
-	position: absolute;
-	max-width: 200px;
-	color: #555;
-	text-align: center;
-}
-
-.langWrap {
-	// background: #333;
-
-	a {
-		text-transform: uppercase;
-		color: #fff;
-		text-decoration: none;
-		padding: 0 10px;
-		font-weight: bold;
-		background: #555656;
-		font-size: 16px;
-
-		&.active {
-			background: $secondary-color;
-		}
-	}
-}
-
 // Arrow
 .arrow {
 	position: absolute;
