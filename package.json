@@ -8,6 +8,10 @@
 		"sass": "node-sass -w scss/ -o dist/css/ --recursive",
 		"deploy": "gh-pages -d dist"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/laboprod/my_portfolio.git"
+	},
 	"author": "François Labeau",
 	"license": "ISC",
 	"dependencies": {
