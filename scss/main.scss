@@ -210,8 +210,9 @@ main {
 
 	img {
 		width: 100%;
-		height: 160px;
+		height: 30vh;
 		border: 3px #fff solid;
+		object-fit: cover;
 
 		&:hover {
 			opacity: 0.5;
