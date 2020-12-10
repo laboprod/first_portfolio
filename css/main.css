@@ -115,23 +115,6 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.7); }
 
-.container {
-  position: absolute;
-  max-width: 200px;
-  color: #555;
-  text-align: center; }
-
-.langWrap a {
-  text-transform: uppercase;
-  color: #fff;
-  text-decoration: none;
-  padding: 0 10px;
-  font-weight: bold;
-  background: #555656;
-  font-size: 16px; }
-  .langWrap a.active {
-    background: #eece1a; }
-
 .arrow {
   position: absolute;
   top: 90%;
@@ -266,8 +249,9 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
-    height: 160px;
-    border: 3px #fff solid; }
+    height: 30vh;
+    border: 3px #fff solid;
+    object-fit: cover; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #eece1a;
